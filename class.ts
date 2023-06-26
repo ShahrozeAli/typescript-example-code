@@ -1,14 +1,15 @@
 class Point {
-  x: number;
-  y: number;
-  constructor(x?: number, y?: number) {
+  //   private x: number;
+  //   private y: number;
+  constructor(private x?: number, private y?: number) {
     // in ts we can't have multiple constructors
     //making values optional, so object doesn't throw error if params are missing
-    this.x = x !== undefined ? x : 0;
-    this.y = y !== undefined ? y : 0;
+    //ts auto initializes values with same name
+    // this.x = x !== undefined ? x : 0;
+    // this.y = y !== undefined ? y : 0;
   }
 
-  draw() {
+  public draw() {
     console.log("X = ", this.x, " Y = ", this.y);
   }
 
