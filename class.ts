@@ -13,6 +13,17 @@ class Point {
     console.log("X = ", this.x, " Y = ", this.y);
   }
 
+//   getX() {
+  get X() {
+    return this.x;
+  }
+
+//   setX(value) {
+  set X(value) {
+    if (value < 0) throw new Error("value can't be less than 0");
+    this.x = value;
+  }
+
   getDistance(point: Point) {}
 }
 
@@ -22,4 +33,6 @@ let point = new Point(1, 2); //initializes memory to it
 
 // point.x = 1;
 // point.y = 2;
+// point.setX(10);
+point.X(10);
 point.draw();
